@@ -33,11 +33,13 @@ void knapsack(int capacity,int n,int weights[n+1],int values[n+1],int mat[n+1][c
         }
     }
     display(n+1,capacity+1,mat);
+    //backtracking needs to be corrected, this is wrong.
     int remaining_weight=capacity;
     for(i=n;i>=1;i--)
     {
         if(mat[i][remaining_weight]!=mat[i-1][remaining_weight])
         printf("item %d included\n",i);
+        printf("this is wrong pls ignore");
         remaining_weight-=capacity;
     }
 }
